@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".SourcesActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_weight="1"
+        android:text="Sources"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="443dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Pick a source"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Books" />
+
+    <Button
+        android:id="@+id/websitesbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Website" />
+
+    <Button
+        android:id="@+id/youtubebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Youtube Channel" />
+
+    <Button
+        android:id="@+id/githubreposButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Github Reporsitory" />
+</LinearLayout>
