@@ -60,42 +60,50 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/mobileRoadmapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="14dp"
         android:backgroundTint="#4E4E4E"
         android:paddingRight="30dp"
         android:text="Mobile Development"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockchainRoadmapBtn" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/blockchainRoadmapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="19dp"
         android:backgroundTint="#4E4E4E"
         android:paddingRight="100dp"
         android:text="Blockchaın"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="427dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backendRoadmapBtn" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/backendRoadmapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="19dp"
         android:backgroundTint="#4E4E4E"
         android:text="Backend Development"
         android:textColorHint="#040101"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="360dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frontendRoadmapBtn" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/frontendRoadmapBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="27dp"
         android:backgroundTint="#4E4E4E"
         android:text="Frontend Development"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="293dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
