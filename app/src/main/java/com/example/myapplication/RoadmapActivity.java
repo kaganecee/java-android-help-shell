@@ -16,11 +16,32 @@ public class RoadmapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button frontendRoadmapBtn = findViewById(R.id.frontendRoadmapBtn);
+        Button backendRoadmapBtn = findViewById(R.id.backendRoadmapBtn);
+        Button mobileRoadmapBtn = findViewById(R.id.mobileRoadmapBtn);
+        Button blockchainRoadmapBtn = findViewById(R.id.blockchainRoadmapBtn);
 
         frontendRoadmapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clickedButton("https://roadmap.sh/frontend");
+            }
+        });
+        backendRoadmapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickedButton("https://roadmap.sh/backend");
+            }
+        });
+        mobileRoadmapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickedButton("https://roadmap.sh/android");
+            }
+        });
+        blockchainRoadmapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickedButton("https://roadmap.sh/blockchain");
             }
         });
     }
