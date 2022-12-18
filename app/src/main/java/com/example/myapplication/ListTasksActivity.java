@@ -12,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.sql.Array;
 
 public class ListTasksActivity extends AppCompatActivity {
-    EditText addNewTask = findViewById(R.id.addNewTask);
+    EditText addNewTask = findViewById(R.id.ConstrainLayout);
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

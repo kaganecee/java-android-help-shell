@@ -26,7 +26,7 @@
         android:id="@+id/timerButton"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#4E4E4E"
         android:paddingLeft="30dp"
