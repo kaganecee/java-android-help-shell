@@ -94,12 +94,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/books_foreground"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="69dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

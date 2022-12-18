@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button loginButton = (Button) findViewById(R.id.button);
+        Button loginButton = (Button) findViewById(R.id.sourcesButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -10,19 +10,67 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
         android:text="Pick a path                        Set your timer                  Make plan and start!"
+        android:textAlignment="center"
         android:textColor="#101010"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#4E4E4E"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Timer"
+        app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roadmapsButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/roadmapsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#4E4E4E"
+        android:text="Roadmaps"
+        app:layout_constraintBottom_toTopOf="@+id/timerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/toDoListButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#4E4E4E"
+        android:text="Todo List"
+        app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerButton" />
+
+    <Button
+        android:id="@+id/sourcesButton"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="154dp"
@@ -33,34 +81,24 @@
         android:text="Sources"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/toDoListButton" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:backgroundTint="#4E4E4E"
-        android:text="Todo List"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="440dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:backgroundTint="#4E4E4E"
-        android:text="Timer"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:backgroundTint="#4E4E4E"
-        android:text="Roadmaps"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="302dp" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="#000000"
+        android:gravity="center_horizontal"
+        android:text="Horizontal Line"
+        android:textSize="3sp"
+        app:layout_constraintBottom_toTopOf="@+id/roadmapsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
