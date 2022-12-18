@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,21 +20,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        Button books = findViewById(R.id.books);
-        Button youtubebutton = findViewById(R.id.youtubebutton);
-        Button websitesButton = findViewById(R.id.websitesbutton);
-        Button githubreposButton = findViewById(R.id.githubreposButton);
+        Button roadmapsButton = findViewById(R.id.roadmapsButton);
+        Button timerButton = findViewById(R.id.timerButton);
+        Button toDoListButton = findViewById(R.id.toDoListButton);
+        Button sourcesButton = findViewById(R.id.sourcesButton);
 
-        books.setOnClickListener(new View.OnClickListener() {
+        roadmapsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new Books());
+                openActivity(RoadmapActivity.class);
             }
         });
-        books.setOnClickListener(new View.OnClickListener() {
+        timerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new YoutubeChannels());
+                openActivity(TimerActivity.class);
+            }
+        });
+        toDoListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity(ToDoListActivity.class);
+            }
+        });
+        sourcesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity(SourcesActivity.class);
             }
         });
 
@@ -46,10 +59,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
-    private void replaceFragment (Fragment fragment){
-        FragmentManager fm = getSupportFragmentManager();
-        Fragment bookFragment = fm.findFragmentById("books");
-        fm.beginTransaction().replace(R.id.containerView,bookFragment).commit();
+    public void openActivity(Class activityClass){
+        Intent intent = new Intent(this,activityClass);
+        startActivity(intent);
     }
 }

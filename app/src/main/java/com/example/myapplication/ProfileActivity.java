@@ -20,7 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do_list);
     }
-    public void addNewTask(View v){
+    public void changeUserInfo(View v){
         Map<String, Object> docData = new HashMap<>();
         docData.put("name", name);
         docData.put("surname", taskPriority);

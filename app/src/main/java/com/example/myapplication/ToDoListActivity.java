@@ -17,10 +17,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ToDoListActivity extends AppCompatActivity {
-    EditText taskName = findViewById(R.id.books);
-    EditText taskPriority = findViewById(R.id.books);
-    EditText taskStatus = findViewById(R.id.books);
-    EditText taskDeadline = findViewById(R.id.books);
+    EditText taskName = findViewById(R.id.taskName);
+    EditText taskPriority = findViewById(R.id.taskPriority);
+    EditText taskStatus = findViewById(R.id.taskStatus);
+    EditText taskDeadline = findViewById(R.id.taskDeadline);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +35,6 @@ public class ToDoListActivity extends AppCompatActivity {
         docData.put("deadline", taskDeadline);
         db.collection("data").add(docData);
     }
-    public object getTask(View v){
-        Array tasks = db.collection("tasks").get();
-    }
-    public void openActivity (Class activityClass){
-        Intent intent = new Intent(this,activityClass);
-        startActivity(intent);
-    }
+
+
 }
