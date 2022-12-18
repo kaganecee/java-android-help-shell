@@ -6,4 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".TimerActivity">
 
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#000000"
+        android:gravity="center_horizontal"
+        android:text="Horizontal Line"
+        android:textSize="3sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="#000000"
+        android:gravity="center_horizontal"
+        android:text="Horizontal Line"
+        android:textSize="3sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="112dp"
+        android:text="Ready to continue?"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/chronometer"
+        android:layout_width="61dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="285dp"
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:text=">"
+        android:textSize="34sp"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
