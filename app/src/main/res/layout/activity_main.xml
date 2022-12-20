@@ -30,12 +30,10 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#4E4E4E"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
         android:text="Tımer"
         app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roadmapsButton"
         app:layout_constraintVertical_bias="0.0" />
