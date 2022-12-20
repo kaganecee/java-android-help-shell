@@ -14,9 +14,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="86dp"
         android:layout_marginTop="96dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="29dp"
         android:text="Add New Task"
         android:textColor="#070707"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView49"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,9 +30,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginTop="29dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="20dp"
         android:text="Please enter the details below."
         android:textColor="#0B0A0A"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView50"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
@@ -153,8 +161,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="84dp"
         android:layout_marginTop="624dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="57dp"
         android:backgroundTint="#4E4E4E"
         android:text="Add Task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
