@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         toDoListButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity(ToDoListActivity.class);
+                openActivity(ListTasksActivity.class);
             }
         });
         sourcesButton.setOnClickListener(new View.OnClickListener() {
@@ -50,15 +50,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button loginButton = (Button) findViewById(R.id.sourcesButton);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(this,loginActivity.class);
-                intent.putExtra("msg","hello");
-                startActivity(intent);
-            }
-        });
+//        Button loginButton = (Button) findViewById(R.id.sourcesButton);
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(this,loginActivity.class);
+//                intent.putExtra("msg","hello");
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
