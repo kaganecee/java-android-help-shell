@@ -33,7 +33,7 @@
         android:text="Tımer"
         app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/roadmapsButton"
         app:layout_constraintVertical_bias="0.0" />
@@ -75,7 +75,7 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="155dp"
-        android:layout_marginBottom="171dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#4E4E4E"
         android:text="Sources"
         app:layout_constraintBottom_toBottomOf="parent"
