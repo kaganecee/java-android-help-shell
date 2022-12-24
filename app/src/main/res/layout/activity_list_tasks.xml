@@ -42,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TableLayout
+        android:id="@+id/taskTable"
         android:layout_width="386dp"
         android:layout_height="149dp"
         android:layout_margin="40dp"
@@ -55,7 +56,9 @@
 
         <!-- Table Heading -->
 
-        <TableRow android:background="#5CBAC3">
+        <TableRow
+            android:id="@+id/taskTableRow1"
+            android:background="#5CBAC3">
 
             <TextView
                 android:layout_width="0dp"
@@ -103,7 +106,7 @@
 
         <!-- Table Data -->
 
-        <TableRow>
+        <TableRow android:id="@+id/taskTableRow2">
 
             <TextView
                 android:layout_width="0dp"
@@ -143,7 +146,7 @@
 
         </TableRow>
 
-        <TableRow>
+        <TableRow android:id="@+id/taskTableRow3">
 
             <TextView
                 android:layout_width="0dp"
@@ -183,7 +186,7 @@
 
         </TableRow>
 
-        <TableRow>
+        <TableRow android:id="@+id/taskTableRow4">
 
             <TextView
                 android:layout_width="0dp"
