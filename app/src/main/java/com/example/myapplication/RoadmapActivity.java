@@ -16,7 +16,7 @@ public class RoadmapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roadmap);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Button frontendRoadmapBtn = findViewById(R.id.frontendRoadmapBtn);
         Button backendRoadmapBtn = findViewById(R.id.backendRoadmapBtn);
@@ -54,7 +54,6 @@ public class RoadmapActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -64,6 +63,7 @@ public class RoadmapActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
