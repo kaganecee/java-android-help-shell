@@ -15,9 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -50,40 +52,48 @@ public class ListTasksActivity extends AppCompatActivity {
         });
     }
     public void getTasks(TableLayout taskTable){
-        Task tasks = db.collection("data").get();
-        tasks.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        Thread t = new Thread(new Runnable() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        TableRow tr = new TableRow(ListTasksActivity.this);
+            public void run() {
+                Task tasks = db.collection("data").get();
+                tasks.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                TableRow tr = new TableRow(ListTasksActivity.this);
 
-                        TextView name = new TextView(ListTasksActivity.this);
-                        name.setText(document.getString("name"));
-                        tr.addView(name);
+                                TextView name = new TextView(ListTasksActivity.this);
+                                name.setText("test");
+                                tr.addView(name);
 
-                        TextView priority = new TextView(ListTasksActivity.this);
-                        priority.setText(document.getString("priority"));
-                        tr.addView(priority);
+                                TextView priority = new TextView(ListTasksActivity.this);
+                                priority.setText(document.getString("priority"));
+                                tr.addView(priority);
 
-                        TextView status = new TextView(ListTasksActivity.this);
-                        status.setText(document.getString("status"));
-                        tr.addView(status);
+                                TextView status = new TextView(ListTasksActivity.this);
+                                status.setText(document.getString("status"));
+                                tr.addView(status);
 
-                        TextView deadline = new TextView(ListTasksActivity.this);
-                        deadline.setText(document.getString("deadline"));
-                        tr.addView(deadline);
+                                TextView deadline = new TextView(ListTasksActivity.this);
+                                deadline.setText(document.getString("deadline"));
+                                tr.addView(deadline);
+                                tr.setLayoutParams(new LinearLayout.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT));
+                                taskTable.addView(tr);
 
-                        taskTable.addView(tr, new TableLayout.LayoutParams(
-                                TableRow.LayoutParams.MATCH_PARENT,
-                                TableRow.LayoutParams.MATCH_PARENT));
+                                Toast.makeText(
+                                        ListTasksActivity.this,tr.getChildAt(0).toString()
+                                        , Toast.LENGTH_LONG).show();
 
+                            }
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
                     }
-                } else {
-                    Log.w(TAG, "Error getting documents.", task.getException());
-                }
+                });
             }
         });
+        t.start();
     }
 
     public void openActivity (){

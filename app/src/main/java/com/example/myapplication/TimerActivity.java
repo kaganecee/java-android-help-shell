@@ -12,15 +12,14 @@ import android.widget.Chronometer;
 import android.widget.Toast;
 
 public class TimerActivity extends AppCompatActivity {
-
+    Chronometer chronometer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button chronometerBtn = findViewById(R.id.chronometer);
+//        Button chronometerBtn = findViewById(R.id.chronometer);
         setContentView(R.layout.activity_timer);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Chronometer chronometer = (Chronometer) findViewById(R.id.TimeValue);
         boolean isRunning;
         long pauseOffSet;
         chronometer.setFormat("Time: %s");
