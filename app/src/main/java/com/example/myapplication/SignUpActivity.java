@@ -29,9 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        EditText username = findViewById(R.id.username);
+        EditText username = findViewById(R.id.usernameInput);
         EditText email = findViewById(R.id.email);
-        EditText password = findViewById(R.id.password);
+        EditText password = findViewById(R.id.passwordInput);
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
