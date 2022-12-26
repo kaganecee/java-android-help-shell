@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+        Button loginButton = findViewById(R.id.loginButton);
+        Button registerButton = findViewById(R.id.registerButton);
+
         Button roadmapsButton = findViewById(R.id.roadmapsButton);
         Button timerButton = findViewById(R.id.timerButton);
         Button toDoListButton = findViewById(R.id.toDoListButton);
@@ -47,6 +50,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openActivity(SourcesActivity.class);
+            }
+        });
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity(LoginActivity.class);
+            }
+        });
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity(SignUpActivity.class);
             }
         });
 

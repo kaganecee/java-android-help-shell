@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity {
-    EditText name = findViewById(R.id.name);
+    /*EditText name = findViewById(R.id.name);
     EditText surname = findViewById(R.id.surname);
     EditText password = findViewById(R.id.password);
     EditText confirmPassword = findViewById(R.id.confirmPassword);
@@ -34,5 +34,5 @@ public class ProfileActivity extends AppCompatActivity {
     public void openActivity (Class activityClass){
         Intent intent = new Intent(this,activityClass);
         startActivity(intent);
-    }
+    }*/
 }

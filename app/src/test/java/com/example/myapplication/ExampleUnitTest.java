@@ -14,4 +14,7 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+    public void check_taskStatus_isDone(String excepted) {
+        assertEquals(expected, "done");
+    }
 }

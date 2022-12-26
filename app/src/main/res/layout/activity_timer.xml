@@ -70,4 +70,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
 
+    <TextView
+        android:id="@+id/TimeValue"
+        android:layout_width="165dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="00.00"
+        app:layout_constraintEnd_toStartOf="@+id/chronometer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
