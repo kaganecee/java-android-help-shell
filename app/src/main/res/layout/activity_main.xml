@@ -22,40 +22,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <Button
-        android:id="@+id/timerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#3F3B6C"
-        android:paddingStart="34dp"
-        android:paddingEnd="34dp"
-        android:text="Tımer"
-        app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/roadmapsButton"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/roadmapsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="#3F3B6C"
-        android:text="Roadmaps"
-        app:layout_constraintBottom_toTopOf="@+id/timerButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/toDoListButton"
@@ -70,27 +37,9 @@
         android:text="Todo List"
         app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerButton" />
-
-    <Button
-        android:id="@+id/sourcesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="#3F3B6C"
-        android:paddingStart="22dp"
-        android:paddingEnd="22dp"
-        android:text="Sources"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toDoListButton" />
 
     <TextView
         android:layout_width="0dp"
@@ -99,15 +48,79 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
-        android:background="#256D85"
+        android:background="#3F3B6C"
         android:gravity="center_horizontal"
         android:textSize="2.5sp"
         app:layout_constraintBottom_toTopOf="@+id/roadmapsButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/roadmapsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#3F3B6C"
+        android:text="Roadmaps"
+        app:layout_constraintBottom_toTopOf="@+id/timerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#3F3B6C"
+        android:paddingStart="34dp"
+        android:paddingEnd="34dp"
+        android:text="Tımer"
+        app:layout_constraintBottom_toTopOf="@+id/sourcesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roadmapsButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/sourcesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="#3F3B6C"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:text="Sources"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toDoListButton" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="295dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/help_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

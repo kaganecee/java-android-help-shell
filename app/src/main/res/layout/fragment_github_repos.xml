@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDE4E0"
     tools:context=".GithubRepos">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="#000000"
+        android:background="#3F3B6C"
         android:gravity="center_horizontal"
         android:text="Horizontal Line"
         android:textSize="3sp"
@@ -24,21 +25,21 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.271" />
 
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Github Repositories"
-        android:textColor="#100F0F"
-        android:textSize="30sp"
+        android:textColor="#3F3B6C"
+        android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
         android:id="@+id/textView44"
@@ -49,7 +50,7 @@
         android:layout_marginEnd="218dp"
         android:layout_marginBottom="8dp"
         android:text="Public API's"
-        android:textColor="#090808"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView43"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +66,7 @@
         android:layout_marginEnd="178dp"
         android:layout_marginBottom="16dp"
         android:text="FreeCodeCamp"
-        android:textColor="#100D0D"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView46"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +82,7 @@
         android:layout_marginEnd="102dp"
         android:layout_marginBottom="16dp"
         android:text="100 Days of ML Codes"
-        android:textColor="#090808"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView45"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +97,7 @@
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="8dp"
         android:text="Coding Interview University"
-        android:textColor="#040303"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView42"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +114,7 @@
         android:layout_marginEnd="143dp"
         android:layout_marginBottom="8dp"
         android:text="You Don't Know JS"
-        android:textColor="#090909"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView41"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +130,7 @@
         android:layout_marginEnd="237dp"
         android:layout_marginBottom="80dp"
         android:text="Awesome"
-        android:textColor="#0E0C0C"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +147,7 @@
         android:layout_marginEnd="73dp"
         android:layout_marginBottom="21dp"
         android:text="Free Programming Books"
-        android:textColor="#0B0A0A"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView47"
         app:layout_constraintEnd_toEndOf="parent"
@@ -162,11 +163,27 @@
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="16dp"
         android:text="Project Based Learning"
-        android:textColor="#050404"
+        android:textColor="#3F3B6C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textView44"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="303dp"
+        android:layout_marginBottom="6dp"
+        android:src="@mipmap/help_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/textView38"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
