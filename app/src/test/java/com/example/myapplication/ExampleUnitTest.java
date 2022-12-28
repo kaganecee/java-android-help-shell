@@ -4,17 +4,15 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-public class ExampleUnitTest {
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+import android.widget.Button;
+
+class ButtonTests {
+    public void isButtonExist (Button button) {
+        // Check that the button
+        assertNotNull(button);
     }
-    public void check_taskStatus_isDone(String excepted) {
-        assertEquals(expected, "done");
+    public void compareContentOfButtons (String message, Button button) {
+        assertEquals(message, button.getText().toString());
     }
+
 }
