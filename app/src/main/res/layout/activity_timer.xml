@@ -29,8 +29,8 @@
         android:layout_marginBottom="8dp"
         android:background="#3F3B6C"
         android:backgroundTint="#3F3B6C"
-        android:bottomLeftRadius="2dp"
-        android:bottomRightRadius="2dp"
+        android:bottomLeftRadius="1dp"
+        android:bottomRightRadius="1dp"
         android:text=">"
         android:textSize="34sp"
         android:topLeftRadius="10dp"
@@ -90,5 +90,29 @@
         app:layout_constraintEnd_toStartOf="@+id/chronometer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView55" />
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopof="parent">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F3B6C"
+        app:itemIconTint="@color/white"
+        app:itemRippleColor="#6F68BD"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -64,7 +64,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="178dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="FreeCodeCamp"
         android:textColor="#3F3B6C"
         android:textSize="24sp"
@@ -80,7 +80,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="102dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="100 Days of ML Codes"
         android:textColor="#3F3B6C"
         android:textSize="24sp"
@@ -128,7 +128,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="237dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="90dp"
         android:text="Awesome"
         android:textColor="#3F3B6C"
         android:textSize="24sp"
@@ -143,9 +143,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="73dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="8dp"
         android:text="Free Programming Books"
         android:textColor="#3F3B6C"
         android:textSize="24sp"
@@ -161,7 +161,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="96dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Project Based Learning"
         android:textColor="#3F3B6C"
         android:textSize="24sp"
@@ -185,5 +185,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopof="parent">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F3B6C"
+        app:itemIconTint="@color/white"
+        app:itemRippleColor="#6F68BD"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
