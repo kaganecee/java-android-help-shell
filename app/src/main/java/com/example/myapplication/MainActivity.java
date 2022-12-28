@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        Button loginButton = findViewById(R.id.loginButton);
-        Button registerButton = findViewById(R.id.registerButton);
+        Button loginButton = findViewById(R.id.loginButton2);
+        Button registerButton = findViewById(R.id.registerButton2);
 
         Button roadmapsButton = findViewById(R.id.roadmapsButton);
         Button timerButton = findViewById(R.id.timerButton);
