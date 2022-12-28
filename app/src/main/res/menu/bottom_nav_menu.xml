@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
     <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/person"
+        android:id="@+id/home"
+        android:icon="@mipmap/home_foreground"
         android:title="Home" />
     <item
-        android:id="@+id/home"
-        android:title="Timer"/>
+        android:id="@+id/timer"
+        android:title="Timer"
+        android:icon="@mipmap/timer_foreground"/>
     <item
-            android:id="@+id/todolist"
-            android:title="To-Do List"/>
-        <item
-            android:id="@+id/sources"
-            android:title="Sources"/>
+        android:id="@+id/todolist"
+        android:title="To-Do List"
+        android:icon="@mipmap/list_foreground"/>
+    <item
+        android:id="@+id/sources"
+        android:title="Sources"
+        android:icon="@mipmap/sources_foreground"/>
         <item
             android:id="@+id/roadmaps"
-            android:title="Roadmaps"/>
+            android:title="Roadmaps"
+            android:icon="@mipmap/roadmap_foreground"/>
 
     </menu>
