@@ -65,16 +65,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        Button loginButton = (Button) findViewById(R.id.sourcesButton);
-//        loginButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(this,loginActivity.class);
-//                intent.putExtra("msg","hello");
-//                startActivity(intent);
-//            }
-//        });
-
 
     }
     public void openActivity(Class activityClass){
