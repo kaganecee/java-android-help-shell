@@ -50,40 +50,47 @@ public class ListTasksActivity extends AppCompatActivity {
         });
     }
     public void getTasks(TableLayout taskTable){
-        Task tasks = db.collection("data").get();
-        tasks.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        Thread thread = new Thread(new Runnable() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        TableRow tr = new TableRow(ListTasksActivity.this);
+            public void run() {
+                Task tasks = db.collection("data").get();
+                tasks.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                TableRow tr = new TableRow(ListTasksActivity.this);
 
-                        TextView name = new TextView(ListTasksActivity.this);
-                        name.setText(document.getString("name"));
-                        tr.addView(name);
+                                TextView name = new TextView(ListTasksActivity.this);
+                                name.setText(document.getString("name"));
+                                tr.addView(name);
 
-                        TextView priority = new TextView(ListTasksActivity.this);
-                        priority.setText(document.getString("priority"));
-                        tr.addView(priority);
+                                TextView priority = new TextView(ListTasksActivity.this);
+                                priority.setText(document.getString("priority"));
+                                tr.addView(priority);
 
-                        TextView status = new TextView(ListTasksActivity.this);
-                        status.setText(document.getString("status"));
-                        tr.addView(status);
+                                TextView status = new TextView(ListTasksActivity.this);
+                                status.setText(document.getString("status"));
+                                tr.addView(status);
 
-                        TextView deadline = new TextView(ListTasksActivity.this);
-                        deadline.setText(document.getString("deadline"));
-                        tr.addView(deadline);
+                                TextView deadline = new TextView(ListTasksActivity.this);
+                                deadline.setText(document.getString("deadline"));
+                                tr.addView(deadline);
 
-                        taskTable.addView(tr, new TableLayout.LayoutParams(
-                                TableRow.LayoutParams.MATCH_PARENT,
-                                TableRow.LayoutParams.MATCH_PARENT));
+                                taskTable.addView(tr, new TableLayout.LayoutParams(
+                                        TableRow.LayoutParams.MATCH_PARENT,
+                                        TableRow.LayoutParams.MATCH_PARENT));
 
+                            }
+                        } else {
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
                     }
-                } else {
-                    Log.w(TAG, "Error getting documents.", task.getException());
-                }
+                });
             }
         });
+        thread.start();
+
     }
 
     public void openActivity (){
