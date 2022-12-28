@@ -19,6 +19,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class LoginActivity extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    Boolean isLogged = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,21 +36,25 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
     public void login(String username, String password){
-        Task users = db.collection("users").get();
-        users.addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+        db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        if (document.getString("username") == username && document.getString("password") == password) {
-                            Toast.makeText(getApplicationContext(),"Succesfully logged in.",Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(getApplicationContext(),"Username or password is wrong. Please try again.",Toast.LENGTH_SHORT).show();
+                        if ((document.getString("username").equals(username)) && (document.getString("password").equals(password))) {
+                            isLogged = true;
                         }
+                    }
+                    if (isLogged) {
+                        Toast.makeText(getApplicationContext(),"Succesfully logged in.",Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Username or password is wrong. Please try again.",Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
+
     };
     public void clearInputs(EditText username, EditText password){
         username.getText().clear();
