@@ -19,14 +19,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Button loginButton = findViewById(R.id.loginButton2);
         Button registerButton = findViewById(R.id.registerButton2);
@@ -37,32 +33,32 @@ public class MainActivity extends AppCompatActivity {
         Button sourcesButton = findViewById(R.id.sourcesButton);
 
 
-        bottomNavigationView.findViewById(R.id.bottomNavigationView);
+        BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+            bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.home:
+                            openActivity(MainActivity.class);
+                            break;
+                        case R.id.timer:
+                            openActivity(TimerActivity.class);
+                            break;
+                        case R.id.todolist:
+                            openActivity(ListTasksActivity.class);
+                            break;
+                        case R.id.sources:
+                            openActivity(SourcesActivity.class);
+                            break;
+                        case R.id.roadmaps:
+                            openActivity(RoadmapActivity.class);
+                            break;
+                    }
 
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.home:
-                        Toast.makeText(MainActivity.this,"Home", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.timer:
-                        Toast.makeText(MainActivity.this,"Timer", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.todolist:
-                        Toast.makeText(MainActivity.this,"To-Do List", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.sources:
-                        Toast.makeText(MainActivity.this,"Sources", Toast.LENGTH_LONG).show();
-                        break;
-                    case R.id.roadmaps:
-                        Toast.makeText(MainActivity.this,"Roadmaps", Toast.LENGTH_LONG).show();
-                        break;
+                    return true;
                 }
+            });
 
-                return true;
-            }
-        });
 
 
 
