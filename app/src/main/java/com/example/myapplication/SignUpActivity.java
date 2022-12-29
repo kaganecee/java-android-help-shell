@@ -42,17 +42,17 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
     public void handleNewUsers(String username, String email, String password) {
-                Boolean isUserExist = isUserExist(username);
-                if(!isUserExist){
-                    Map<String, Object> userInfo = new HashMap<>();
-                    userInfo.put("username", username);
-                    userInfo.put("email", email);
-                    userInfo.put("password", password);
-                    db.collection("users").add(userInfo);
-                    Toast.makeText(getApplicationContext(),"Success!!",Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(getApplicationContext(),"This username is already exist.",Toast.LENGTH_SHORT).show();
-                }
+        Boolean isUserExist = isUserExist(username);
+        if(!isUserExist){
+            Map<String, Object> userInfo = new HashMap<>();
+            userInfo.put("username", username);
+            userInfo.put("email", email);
+            userInfo.put("password", password);
+            db.collection("users").add(userInfo);
+            Toast.makeText(getApplicationContext(),"Success!!",Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(getApplicationContext(),"This username is already exist.",Toast.LENGTH_SHORT).show();
+        }
     }
     public void clearInputs(EditText username, EditText email, EditText password){
         username.getText().clear();
