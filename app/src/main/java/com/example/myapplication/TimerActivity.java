@@ -22,7 +22,7 @@ public class TimerActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         boolean isRunning;
         long pauseOffSet;
-        chronometer.setFormat("Time: %s");
+        /*chronometer.setFormat("Time: %s");
         chronometer.setBase(SystemClock.elapsedRealtime());
         chronometer.setOnChronometerTickListener(new Chronometer.OnChronometerTickListener() {
             @Override
@@ -31,7 +31,7 @@ public class TimerActivity extends AppCompatActivity {
                     chronometer.setBase(SystemClock.elapsedRealtime());
                 Toast.makeText(TimerActivity.this, "Bing!", Toast.LENGTH_SHORT);
             }
-        });
+        });*/
     }
 
 
