@@ -87,6 +87,7 @@
         android:ems="10"
         android:inputType="time"
         android:text="00.00"
+        android:textSize="34sp"
         app:layout_constraintEnd_toStartOf="@+id/chronometer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView55" />
